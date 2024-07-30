@@ -3,7 +3,7 @@
     "description": "Logging Executed SQL Query for Laravel",
     "type": "library",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "autoload": {
         "psr-4": {
             "YukataRm\\Laravel\\QueryLog\\": "src"
@@ -12,7 +12,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "YukataRm\\Laravel\\QueryLog\\ServiceProvider"
+                "YukataRm\\Laravel\\QueryLog\\Provider\\LoggingServiceProvider",
+                "YukataRm\\Laravel\\QueryLog\\Provider\\PublicationServiceProvider"
             ]
         }
     },
@@ -25,7 +26,7 @@
     "require": {
         "php": ">=8.2.0",
         "laravel/framework": "^11.0",
-        "yukata-roommate/simple-logger": "^1.0"
+        "yukata-roommate/simple-logger": "^1.0.0"
     },
     "minimum-stability": "dev"
 }
